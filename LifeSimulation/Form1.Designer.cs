@@ -29,12 +29,16 @@ namespace LifeSimulation
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelScale = new System.Windows.Forms.Label();
             this.nupdScale = new System.Windows.Forms.NumericUpDown();
             this.nupdDensity = new System.Windows.Forms.NumericUpDown();
             this.labelDensity = new System.Windows.Forms.Label();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +59,8 @@ namespace LifeSimulation
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonStart);
             this.splitContainer1.Panel1.Controls.Add(this.nupdDensity);
             this.splitContainer1.Panel1.Controls.Add(this.labelDensity);
             this.splitContainer1.Panel1.Controls.Add(this.nupdScale);
@@ -89,18 +95,43 @@ namespace LifeSimulation
             // nupdScale
             // 
             this.nupdScale.Location = new System.Drawing.Point(28, 66);
+            this.nupdScale.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.nupdScale.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.nupdScale.Name = "nupdScale";
             this.nupdScale.Size = new System.Drawing.Size(257, 26);
             this.nupdScale.TabIndex = 1;
             this.nupdScale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nupdScale.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // nupdDensity
             // 
             this.nupdDensity.Location = new System.Drawing.Point(28, 148);
+            this.nupdDensity.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.nupdDensity.Name = "nupdDensity";
             this.nupdDensity.Size = new System.Drawing.Size(257, 26);
             this.nupdDensity.TabIndex = 3;
             this.nupdDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nupdDensity.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // labelDensity
             // 
@@ -111,6 +142,29 @@ namespace LifeSimulation
             this.labelDensity.Size = new System.Drawing.Size(84, 25);
             this.labelDensity.TabIndex = 2;
             this.labelDensity.Text = "Density";
+            // 
+            // buttonStart
+            // 
+            this.buttonStart.Location = new System.Drawing.Point(28, 202);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(114, 50);
+            this.buttonStart.TabIndex = 4;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(173, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 50);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Stop";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -140,6 +194,9 @@ namespace LifeSimulation
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NumericUpDown nupdDensity;
         private System.Windows.Forms.Label labelDensity;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
