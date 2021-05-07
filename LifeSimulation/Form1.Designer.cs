@@ -176,7 +176,7 @@ namespace LifeSimulation
             this.ClientSize = new System.Drawing.Size(1180, 678);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Life Simulation";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

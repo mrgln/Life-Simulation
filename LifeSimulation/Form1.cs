@@ -130,17 +130,29 @@ namespace LifeSimulation
             {
                 var x = e.Location.X / scale;
                 var y = e.Location.Y / scale;
-                field[x, y] = true;
+
+                var validationPassed = CheckMousePosition(x, y);
+
+                if(validationPassed)
+                    field[x, y] = true;
             }
 
             if (e.Button == MouseButtons.Right)
             {
                 var x = e.Location.X / scale;
                 var y = e.Location.Y / scale;
-                field[x, y] = false;
+
+                var validationPassed = CheckMousePosition(x, y);
+
+                if (validationPassed)
+                    field[x, y] = false;
             }
         }
 
+        private bool CheckMousePosition(int x,int y)
+        {
+            return x >= 0 && y >= 0 && x < columns && y < rows;
+        }
         private void buttonStart_Click(object sender, EventArgs e)
         {
             StartGame();
