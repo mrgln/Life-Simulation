@@ -82,7 +82,7 @@ namespace LifeSimulation
                         newField[x, y] = field[x, y];
                     
                     if (hasLife)
-                        graphics.FillRectangle(Brushes.Crimson, x * scale, y * scale, scale, scale);
+                        graphics.FillRectangle(Brushes.Aqua, x * scale, y * scale, scale, scale);
                 }
             }
             field = newField;
@@ -119,6 +119,26 @@ namespace LifeSimulation
         private void buttonStop_Click(object sender, EventArgs e)
         {
             StopGame();
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (timer1.Enabled == false)
+                return;
+
+            if(e.Button==MouseButtons.Left)
+            {
+                var x = e.Location.X / scale;
+                var y = e.Location.Y / scale;
+                field[x, y] = true;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                var x = e.Location.X / scale;
+                var y = e.Location.Y / scale;
+                field[x, y] = false;
+            }
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
