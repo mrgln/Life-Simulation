@@ -12,12 +12,11 @@ namespace LifeSimulation
         private readonly int rows;
         private readonly int cols;
 
-        private Random random = new Random();
-
         public GameSystem(int rows,int cols,int density)
         {
             this.rows = rows;
             this.cols = cols;
+            Random random = new Random();
             field = new bool[cols, rows];
 
             for (int x = 0; x < cols; x++)

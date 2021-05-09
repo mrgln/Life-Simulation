@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LifeSimulation
@@ -54,7 +48,6 @@ namespace LifeSimulation
 
         }
 
-
         private void NewGeneration()
         {
             graphics.Clear(Color.Black);
@@ -76,17 +69,11 @@ namespace LifeSimulation
             gameSystem.NewGeneration();
         }
 
-
-
         private void timer1_Tick(object sender, EventArgs e)
-        {
-            NewGeneration();
-        }
+        {NewGeneration();}
 
         private void buttonStop_Click(object sender, EventArgs e)
-        {
-            StopGame();
-        }
+        {StopGame();}
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -109,8 +96,6 @@ namespace LifeSimulation
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
-        {
-            StartGame();
-        }
+        {StartGame();}
     }
 }
