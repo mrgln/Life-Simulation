@@ -96,6 +96,11 @@ namespace LifeSimulation
             // nupdDensity
             // 
             this.nupdDensity.Location = new System.Drawing.Point(15, 142);
+            this.nupdDensity.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             this.nupdDensity.Minimum = new decimal(new int[] {
             2,
             0,
@@ -106,7 +111,7 @@ namespace LifeSimulation
             this.nupdDensity.TabIndex = 3;
             this.nupdDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nupdDensity.Value = new decimal(new int[] {
-            2,
+            25,
             0,
             0,
             0});
@@ -130,7 +135,7 @@ namespace LifeSimulation
             0,
             0});
             this.nupdScale.Minimum = new decimal(new int[] {
-            2,
+            3,
             0,
             0,
             0});
